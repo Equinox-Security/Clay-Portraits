@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Gallery — Sharon's Clay Portraits</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" media="print" onload="this.media='all';"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap"/></noscript>
+<link rel="stylesheet" href="style.css"/>
+<script>function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:"en",includedLanguages:"nl,de,fr,es,it,pl,pt,da,sv,fi,nb",layout:google.translate.TranslateElement.InlineLayout.SIMPLE},"google_translate_element");}window.addEventListener("load",function(){var s=document.createElement("script");s.src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";document.head.appendChild(s);});</script>
+</head>
+<body>
+<nav class="nav-overlay" id="navOverlay">
+  <a href="index.html">Home</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="commissions.html">Commission a Portrait</a>
+  <a href="about.html">About the Artist</a>
+  <a href="testimonials.html">Testimonials</a>
+  <a href="contact.html">Contact</a>
+  <a href="policies.html">Policies</a>
+  <a href="care.html">Care Instructions</a>
+  <a href="gift-certificates.html">Gift Certificates</a>
+  <span class="nav-close-hint">Press ESC or tap anywhere to close</span>
+</nav>
+<header id="siteHeader">
+  <a class="site-name" href="index.html">Sharon's Clay Portraits</a>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</header>
+<div id="glb" style="position:fixed;inset:0;z-index:300;background:rgba(0,0,0,0.92);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem;opacity:0;pointer-events:none;transition:opacity 0.4s;"><button onclick="closeGLB()" style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;cursor:pointer;color:rgba(240,235,226,0.5);font-size:2rem;line-height:1;">&times;</button><div style="width:min(600px,90vw);max-height:85vh;border-radius:12px;overflow:hidden;box-shadow:0 8px 64px rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;"><img id="glbImg" src="" alt="" style="max-width:100%;max-height:85vh;object-fit:contain;display:none;"/><div id="glbBg" style="width:100%;height:100%;background:var(--arch-bg);"></div></div><p id="glbCap" style="margin-top:1.5rem;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;color:rgba(240,235,226,0.7);text-align:center;"></p></div>
+<div class="page-header"><p class="page-eyebrow">Handcrafted portraits</p><h1 class="page-title">Commissions <em>Gallery</em></h1><p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:var(--ink-soft);max-width:400px;margin:0 auto;">Each piece began as a photograph and became something irreplaceable.</p></div>
+<div style="max-width:1200px;margin:0 auto;padding:0 1.5rem 5rem;columns:3;column-gap:1rem;" id="gGrid"><style>@media(min-width:640px){#gGrid{columns:4;}}@media(min-width:900px){#gGrid{columns:5;}}@media(max-width:480px){#gGrid{columns:2;}}</style>
+<div style="break-inside:avoid;margin-bottom:1.5rem;cursor:pointer;" onclick="openGLB('portrait1.png','Family portrait');"><div style="aspect-ratio:3/4;border-radius:50%;aspect-ratio:2/3;overflow:hidden;position:relative;background:var(--arch-bg);box-shadow:0 4px 24px rgba(0,0,0,0.1);transition:transform 0.3s;"><img src="portrait1.png" alt="Family portrait" style="width:100%;height:100%;object-fit:cover;"/></div><p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.9rem;color:var(--ink-soft);margin-top:0.75rem;text-align:center;">Family portrait</p></div><div style="break-inside:avoid;margin-bottom:1.5rem;cursor:pointer;" onclick="openGLB('portrait2.png','Mother and daughter');"><div style="aspect-ratio:3/4;border-radius:50%;aspect-ratio:2/3;overflow:hidden;position:relative;background:var(--arch-bg);box-shadow:0 4px 24px rgba(0,0,0,0.1);transition:transform 0.3s;"><img src="portrait2.png" alt="Mother and daughter" style="width:100%;height:100%;object-fit:cover;"/></div><p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.9rem;color:var(--ink-soft);margin-top:0.75rem;text-align:center;">Mother and daughter</p></div><div style="break-inside:avoid;margin-bottom:1.5rem;cursor:pointer;" onclick="openGLB('portrait3.png','Couple portrait');"><div style="aspect-ratio:3/4;border-radius:50%;aspect-ratio:2/3;overflow:hidden;position:relative;background:var(--arch-bg);box-shadow:0 4px 24px rgba(0,0,0,0.1);transition:transform 0.3s;"><img src="portrait3.png" alt="Couple portrait" style="width:100%;height:100%;object-fit:cover;"/></div><p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.9rem;color:var(--ink-soft);margin-top:0.75rem;text-align:center;">Couple portrait</p></div><div style="break-inside:avoid;margin-bottom:1.5rem;cursor:pointer;" onclick="openGLB('portrait4.png','Grandmother portrait');"><div style="aspect-ratio:3/4;border-radius:50%;aspect-ratio:2/3;overflow:hidden;position:relative;background:var(--arch-bg);box-shadow:0 4px 24px rgba(0,0,0,0.1);transition:transform 0.3s;"><img src="portrait4.png" alt="Grandmother portrait" style="width:100%;height:100%;object-fit:cover;"/></div><p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.9rem;color:var(--ink-soft);margin-top:0.75rem;text-align:center;">Grandmother portrait</p></div><div style="break-inside:avoid;margin-bottom:1.5rem;cursor:pointer;" onclick="openGLB('portrait5.png','Memorial portrait');"><div style="aspect-ratio:3/4;border-radius:50%;aspect-ratio:2/3;overflow:hidden;position:relative;background:var(--arch-bg);box-shadow:0 4px 24px rgba(0,0,0,0.1);transition:transform 0.3s;"><img src="portrait5.png" alt="Memorial portrait" style="width:100%;height:100%;object-fit:cover;"/></div><p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.9rem;color:var(--ink-soft);margin-top:0.75rem;text-align:center;">Memorial portrait</p></div></div>
+<footer class="reveal">
+  <div class="footer-name">Sharon's Clay Portraits</div>
+  <div class="footer-links" style="display:flex;justify-content:center;gap:1.5rem;margin-bottom:1.5rem;flex-wrap:wrap;">
+    <a href="commissions.html">Commission a Portrait</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="policies.html">Policies</a>
+  </div>
+  <p style="font-family:'Jost',sans-serif;font-size:0.7rem;color:var(--muted);letter-spacing:0.08em;">&copy; 2026 Sharon's Clay Portraits &nbsp;&bull;&nbsp; All rights reserved</p>
+  <div id="google_translate_element" style="margin-top:1rem;"></div>
+</footer>
+<script>
+function openGLB(url,cap){var lb=document.getElementById("glb"),img=document.getElementById("glbImg"),bg=document.getElementById("glbBg");if(url){img.src=url;img.style.display="block";bg.style.display="none";}else{img.style.display="none";bg.style.display="block";}document.getElementById("glbCap").textContent=cap||"";lb.style.opacity="1";lb.style.pointerEvents="all";document.body.style.overflow="hidden";}
+function closeGLB(){var lb=document.getElementById("glb");lb.style.opacity="0";lb.style.pointerEvents="none";document.body.style.overflow="";}
+document.getElementById("glb").addEventListener("click",function(e){if(e.target===this)closeGLB();});
+var _hbg=document.getElementById("hamburger"),_nov=document.getElementById("navOverlay");
+_hbg.addEventListener("click",function(){var o=_nov.classList.toggle("open");_hbg.classList.toggle("open",o);document.body.style.overflow=o?"hidden":"";});
+_nov.addEventListener("click",function(e){if(e.target===_nov||e.target.classList.contains("nav-close-hint")){_nov.classList.remove("open");_hbg.classList.remove("open");document.body.style.overflow="";}});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"){_nov.classList.remove("open");_hbg.classList.remove("open");document.body.style.overflow="";}});
+window.addEventListener("scroll",function(){document.getElementById("siteHeader").classList.toggle("scrolled",window.scrollY>60);},{passive:true});
+function _checkReveals(){document.querySelectorAll(".reveal:not(.visible)").forEach(function(r){var rect=r.getBoundingClientRect();if(rect.top<window.innerHeight-40)r.classList.add("visible");});};
+_checkReveals();window.addEventListener("scroll",_checkReveals,{passive:true});
+</script>
+</body>
+</html>

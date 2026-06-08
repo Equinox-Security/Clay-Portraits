@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Care Instructions — Sharon's Clay Portraits</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" media="print" onload="this.media='all';"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap"/></noscript>
+<link rel="stylesheet" href="style.css"/>
+<script>function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:"en",includedLanguages:"nl,de,fr,es,it,pl,pt,da,sv,fi,nb",layout:google.translate.TranslateElement.InlineLayout.SIMPLE},"google_translate_element");}window.addEventListener("load",function(){var s=document.createElement("script");s.src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";document.head.appendChild(s);});</script>
+</head>
+<body>
+<nav class="nav-overlay" id="navOverlay">
+  <a href="index.html">Home</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="commissions.html">Commission a Portrait</a>
+  <a href="about.html">About the Artist</a>
+  <a href="testimonials.html">Testimonials</a>
+  <a href="contact.html">Contact</a>
+  <a href="policies.html">Policies</a>
+  <a href="care.html">Care Instructions</a>
+  <a href="gift-certificates.html">Gift Certificates</a>
+  <span class="nav-close-hint">Press ESC or tap anywhere to close</span>
+</nav>
+<header id="siteHeader">
+  <a class="site-name" href="index.html">Sharon's Clay Portraits</a>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</header>
+<div class="page-header"><p class="page-eyebrow">Looking after your portrait</p><h1 class="page-title">Care <em>Instructions</em></h1></div>
+<div style="max-width:720px;margin:0 auto;padding:0 1.5rem 6rem;">
+<div class="reveal" style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--ink-soft);line-height:1.8;">
+<p style="margin-bottom:1.25rem;">Your clay portrait is crafted from high-quality polymer clay, hand-painted and sealed for lasting durability. With simple care it will remain beautiful for years.</p>
+<h2 style="font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--ink);margin:2rem 0 0.75rem;">Display</h2>
+<p style="margin-bottom:1.25rem;">Display indoors away from direct sunlight and excessive humidity. Each piece comes ready to hang with a mounting kit included.</p>
+<h2 style="font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--ink);margin:2rem 0 0.75rem;">Cleaning</h2>
+<p style="margin-bottom:1.25rem;">Dust gently with a soft dry cloth. Do not use water, cleaning products, or abrasive materials on the sculpture itself.</p>
+<h2 style="font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--ink);margin:2rem 0 0.75rem;">Handling</h2>
+<p>Handle with care. While polymer clay is durable, delicate details such as hair and fine clothing textures benefit from gentle handling. Hold the piece by its base or backing board where possible.</p>
+</div></div>
+<footer class="reveal">
+  <div class="footer-name">Sharon's Clay Portraits</div>
+  <div class="footer-links" style="display:flex;justify-content:center;gap:1.5rem;margin-bottom:1.5rem;flex-wrap:wrap;">
+    <a href="commissions.html">Commission a Portrait</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="policies.html">Policies</a>
+  </div>
+  <p style="font-family:'Jost',sans-serif;font-size:0.7rem;color:var(--muted);letter-spacing:0.08em;">&copy; 2026 Sharon's Clay Portraits &nbsp;&bull;&nbsp; All rights reserved</p>
+  <div id="google_translate_element" style="margin-top:1rem;"></div>
+</footer>
+<script>
+var _hbg=document.getElementById("hamburger"),_nov=document.getElementById("navOverlay");
+_hbg.addEventListener("click",function(){var o=_nov.classList.toggle("open");_hbg.classList.toggle("open",o);document.body.style.overflow=o?"hidden":"";});
+_nov.addEventListener("click",function(e){if(e.target===_nov||e.target.classList.contains("nav-close-hint")){_nov.classList.remove("open");_hbg.classList.remove("open");document.body.style.overflow="";}});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"){_nov.classList.remove("open");_hbg.classList.remove("open");document.body.style.overflow="";}});
+window.addEventListener("scroll",function(){document.getElementById("siteHeader").classList.toggle("scrolled",window.scrollY>60);},{passive:true});
+function _checkReveals(){document.querySelectorAll(".reveal:not(.visible)").forEach(function(r){var rect=r.getBoundingClientRect();if(rect.top<window.innerHeight-40)r.classList.add("visible");});};
+_checkReveals();window.addEventListener("scroll",_checkReveals,{passive:true});
+</script>
+</body>
+</html>
