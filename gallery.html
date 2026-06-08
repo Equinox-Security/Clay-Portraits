@@ -26,7 +26,26 @@
 </nav>
 <header id="siteHeader">
   <a class="site-name" href="index.html">Sharon's Clay Portraits</a>
+  <div style="display:flex;align-items:center;gap:0.75rem;">
+  <div style="position:relative;" id="langWrap">
+    <button id="langBtn" aria-label="Select language" style="background:none;border:none;cursor:pointer;padding:0.25rem;display:flex;align-items:center;gap:0.4rem;color:var(--ink);opacity:0.7;transition:opacity 0.2s;" onmouseenter="this.style.opacity='1'" onmouseleave="this.style.opacity='0.7'"><svg width="18" height="18" fill="none" stroke="var(--clay)" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span style="font-family:'Jost',sans-serif;font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;">Language</span></button>
+  <div id="langMenu" style="display:none;position:absolute;top:calc(100% + 0.5rem);right:0;background:var(--parchment);border:1px solid var(--border);border-radius:10px;box-shadow:0 4px 24px rgba(0,0,0,0.12);min-width:160px;overflow:hidden;z-index:200;">
+    <div onclick="doTranslate('en')" style="padding:0.6rem 1rem;font-family:'Jost',sans-serif;font-size:0.8rem;cursor:pointer;border-bottom:1px solid var(--border);color:var(--clay);font-weight:500;transition:background 0.15s;" onmouseenter="this.style.background='var(--clay-pale)'" onmouseleave="this.style.background=''">Show original</div>
+    <div onclick="doTranslate('nl')" style="padding:0.6rem 1rem;font-family:'Jost',sans-serif;font-size:0.8rem;cursor:pointer;color:var(--ink);transition:background 0.15s;" onmouseenter="this.style.background='var(--clay-pale)'" onmouseleave="this.style.background=''">Nederlands</div>
+    <div onclick="doTranslate('de')" style="padding:0.6rem 1rem;font-family:'Jost',sans-serif;font-size:0.8rem;cursor:pointer;color:var(--ink);transition:background 0.15s;" onmouseenter="this.style.background='var(--clay-pale)'" onmouseleave="this.style.background=''">Deutsch</div>
+    <div onclick="doTranslate('fr')" style="padding:0.6rem 1rem;font-family:'Jost',sans-serif;font-size:0.8rem;cursor:pointer;color:var(--ink);transition:background 0.15s;" onmouseenter="this.style.background='var(--clay-pale)'" onmouseleave="this.style.background=''">Français</div>
+    <div onclick="doTranslate('es')" style="padding:0.6rem 1rem;font-family:'Jost',sans-serif;font-size:0.8rem;cursor:pointer;color:var(--ink);transition:background 0.15s;" onmouseenter="this.style.background='var(--clay-pale)'" onmouseleave="this.style.background=''">Español</div>
+    <div onclick="doTranslate('it')" style="padding:0.6rem 1rem;font-family:'Jost',sans-serif;font-size:0.8rem;cursor:pointer;color:var(--ink);transition:background 0.15s;" onmouseenter="this.style.background='var(--clay-pale)'" onmouseleave="this.style.background=''">Italiano</div>
+    <div onclick="doTranslate('pl')" style="padding:0.6rem 1rem;font-family:'Jost',sans-serif;font-size:0.8rem;cursor:pointer;color:var(--ink);transition:background 0.15s;" onmouseenter="this.style.background='var(--clay-pale)'" onmouseleave="this.style.background=''">Polski</div>
+    <div onclick="doTranslate('pt')" style="padding:0.6rem 1rem;font-family:'Jost',sans-serif;font-size:0.8rem;cursor:pointer;color:var(--ink);transition:background 0.15s;" onmouseenter="this.style.background='var(--clay-pale)'" onmouseleave="this.style.background=''">Português</div>
+    <div onclick="doTranslate('da')" style="padding:0.6rem 1rem;font-family:'Jost',sans-serif;font-size:0.8rem;cursor:pointer;color:var(--ink);transition:background 0.15s;" onmouseenter="this.style.background='var(--clay-pale)'" onmouseleave="this.style.background=''">Dansk</div>
+    <div onclick="doTranslate('sv')" style="padding:0.6rem 1rem;font-family:'Jost',sans-serif;font-size:0.8rem;cursor:pointer;color:var(--ink);transition:background 0.15s;" onmouseenter="this.style.background='var(--clay-pale)'" onmouseleave="this.style.background=''">Svenska</div>
+    <div onclick="doTranslate('fi')" style="padding:0.6rem 1rem;font-family:'Jost',sans-serif;font-size:0.8rem;cursor:pointer;color:var(--ink);transition:background 0.15s;" onmouseenter="this.style.background='var(--clay-pale)'" onmouseleave="this.style.background=''">Suomi</div>
+    <div onclick="doTranslate('nb')" style="padding:0.6rem 1rem;font-family:'Jost',sans-serif;font-size:0.8rem;cursor:pointer;color:var(--ink);transition:background 0.15s;" onmouseenter="this.style.background='var(--clay-pale)'" onmouseleave="this.style.background=''">Norsk</div>
+  </div>
+</div>
   <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
 </header>
 <div id="glb" style="position:fixed;inset:0;z-index:300;background:rgba(0,0,0,0.92);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem;opacity:0;pointer-events:none;transition:opacity 0.4s;"><button onclick="closeGLB()" style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;cursor:pointer;color:rgba(240,235,226,0.5);font-size:2rem;line-height:1;">&times;</button><div style="width:min(600px,90vw);max-height:85vh;border-radius:12px;overflow:hidden;box-shadow:0 8px 64px rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;"><img id="glbImg" src="" alt="" style="max-width:100%;max-height:85vh;object-fit:contain;display:none;"/><div id="glbBg" style="width:100%;height:100%;background:var(--arch-bg);"></div></div><p id="glbCap" style="margin-top:1.5rem;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;color:rgba(240,235,226,0.7);text-align:center;"></p></div>
 <div class="page-header"><p class="page-eyebrow">Handcrafted portraits</p><h1 class="page-title">Commissions <em>Gallery</em></h1><p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:var(--ink-soft);max-width:400px;margin:0 auto;">Each piece began as a photograph and became something irreplaceable.</p></div>
@@ -53,6 +72,22 @@ _hbg.addEventListener("click",function(){var o=_nov.classList.toggle("open");_hb
 _nov.addEventListener("click",function(e){if(e.target===_nov||e.target.classList.contains("nav-close-hint")){_nov.classList.remove("open");_hbg.classList.remove("open");document.body.style.overflow="";}});
 document.addEventListener("keydown",function(e){if(e.key==="Escape"){_nov.classList.remove("open");_hbg.classList.remove("open");document.body.style.overflow="";}});
 window.addEventListener("scroll",function(){document.getElementById("siteHeader").classList.toggle("scrolled",window.scrollY>60);},{passive:true});
+(function(){var lb=document.getElementById("langBtn"),lm=document.getElementById("langMenu");
+if(lb&&lm){
+  lb.addEventListener("click",function(e){e.stopPropagation();lm.style.display=lm.style.display==="none"?"block":"none";});
+  document.addEventListener("click",function(){if(lm)lm.style.display="none";});
+}
+function doTranslate(lang){
+  var lm2=document.getElementById("langMenu");if(lm2)lm2.style.display="none";
+  if(lang==="en"){var c=document.querySelector(".goog-te-combo");
+    if(c){c.value="";c.dispatchEvent(new Event("change"));}
+    else{document.cookie="googtrans=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/";location.reload();}
+    return;}
+  var sel=document.querySelector(".goog-te-combo");
+  if(sel){sel.value=lang;sel.dispatchEvent(new Event("change"));}
+  else{document.cookie="googtrans=/en/"+lang+";path=/";location.reload();}
+}
+})();
 function _checkReveals(){document.querySelectorAll(".reveal:not(.visible)").forEach(function(r){var rect=r.getBoundingClientRect();if(rect.top<window.innerHeight-40)r.classList.add("visible");});};
 _checkReveals();window.addEventListener("scroll",_checkReveals,{passive:true});
 </script>
