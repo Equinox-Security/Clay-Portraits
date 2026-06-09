@@ -82,15 +82,29 @@ if(lb&&lm){
 }
 function doTranslate(lang){
   var lm2=document.getElementById("langMenu");if(lm2)lm2.style.display="none";
-  if(lang==="en"){
-    document.cookie="googtrans=;path=/;expires=Thu,01 Jan 1970 00:00:00 GMT";
-    document.cookie="googtrans=;path=/;domain="+location.hostname+";expires=Thu,01 Jan 1970 00:00:00 GMT";
-    location.reload();return;}
-  document.cookie="googtrans=/en/"+lang+";path=/";
-  document.cookie="googtrans=/en/"+lang+";path=/;domain="+location.hostname;
   var sel=document.querySelector(".goog-te-combo");
-  if(sel){sel.value=lang;sel.dispatchEvent(new Event("change"));}
-  else{location.reload();}
+  if(sel){
+    if(lang==="en"){sel.value="";sel.dispatchEvent(new Event("change"));}
+    else{sel.value=lang;sel.dispatchEvent(new Event("change"));}
+    return;
+  }
+  var _tries=0;
+  var _t=setInterval(function(){
+    var sel2=document.querySelector(".goog-te-combo");
+    if(sel2){
+      clearInterval(_t);
+      if(lang==="en"){sel2.value="";sel2.dispatchEvent(new Event("change"));}
+      else{sel2.value=lang;sel2.dispatchEvent(new Event("change"));}
+    } else if(++_tries>15){
+      clearInterval(_t);
+      if(lang==="en"){
+        document.cookie="googtrans=;path=/;expires=Thu,01 Jan 1970 00:00:00 GMT";
+      } else {
+        document.cookie="googtrans=/en/"+lang+";path=/";
+      }
+      location.reload();
+    }
+  },200);
 }
 })();
 function _checkReveals(){document.querySelectorAll(".reveal:not(.visible)").forEach(function(r){var rect=r.getBoundingClientRect();if(rect.top<window.innerHeight-40)r.classList.add("visible");});};
