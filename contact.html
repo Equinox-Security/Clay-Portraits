@@ -91,6 +91,7 @@ function doTranslate(lang){
   },200);
 }
 })();
+(function(){function _kb(){var f=document.querySelector(".goog-te-banner-frame");if(f)f.style.setProperty("display","none","important");document.body.style.setProperty("top","0","important");document.body.style.setProperty("margin-top","0","important");}_kb();new MutationObserver(function(){_kb();}).observe(document.body,{childList:true,subtree:true});})();
 function _checkReveals(){document.querySelectorAll(".reveal:not(.visible)").forEach(function(r){var rect=r.getBoundingClientRect();if(rect.top<window.innerHeight-40)r.classList.add("visible");});};
 _checkReveals();window.addEventListener("scroll",_checkReveals,{passive:true});
 </script>
