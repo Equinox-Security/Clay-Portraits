@@ -6,8 +6,8 @@
 <title>Sharon's Clay Portraits — Sharon's Clay Portraits</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" media="print" onload="this.media='all';"/>
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap"/></noscript>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" media="print" onload="this.media='all';"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap"/></noscript>
 <link rel="stylesheet" href="style.css"/>
 <script>function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:"en",includedLanguages:"nl,de,fr,es,it,pl,pt,da,sv,fi,nb",layout:google.translate.TranslateElement.InlineLayout.SIMPLE},"google_translate_element");}window.addEventListener("load",function(){var s=document.createElement("script");s.src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";document.head.appendChild(s);});</script>
 </head>
@@ -21,7 +21,6 @@
   <a href="contact.html">Contact</a>
   <a href="policies.html">Policies</a>
   <a href="care.html">Care Instructions</a>
-  <a href="gift-certificates.html">Gift Certificates</a>
   <span class="nav-close-hint">Press ESC or tap anywhere to close</span>
 </nav>
 <header id="siteHeader">
@@ -73,10 +72,10 @@
 </section>
 <div style="width:40px;height:1px;background:var(--border);margin:0 auto 4rem;"></div>
 <section style="padding:5rem 2rem 6rem;text-align:center;">
-<style>.testimonial-item{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:0;transition:opacity 0.8s;pointer-events:none;}.testimonial-item.active{opacity:1;pointer-events:all;}#tDots span{width:5px;height:5px;border-radius:50%;background:var(--ink);opacity:0.2;transition:opacity 0.3s;cursor:pointer;}#tDots span.active{opacity:0.7;}</style>
+<style>.testimonial-item{display:none;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 1rem;}.testimonial-item.active{display:flex;}#tDots span{width:5px;height:5px;border-radius:50%;background:var(--ink);opacity:0.2;transition:opacity 0.3s;cursor:pointer;}#tDots span.active{opacity:0.7;}.testimonial-quote{font-size:clamp(1rem,3.5vw,1.35rem);}</style>
   <p style="font-family:'Jost',sans-serif;font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--muted);margin-bottom:2rem;">What clients say</p>
-  <div id="tCarousel" style="position:relative;height:5.5rem;max-width:600px;margin:0 auto 2.5rem;cursor:pointer;">
-<div class="testimonial-item active"><p class="testimonial-quote">I cried when I opened it. I knew immediately it was us — without a single face. She captured everything else.</p><p class="testimonial-author">— Michelle D., Concord, New Hampshire</p></div>
+  <div id="tCarousel" style="position:relative;min-height:4rem;max-width:600px;margin:0 auto 2.5rem;cursor:pointer;overflow:hidden;">
+<div class="testimonial-item active"><p class="testimonial-quote">I cried when I opened it. I knew immediately it was us — without a single face. She captured everything else.</p><p class="testimonial-author">— Michelle R., Dover, New Hampshire</p></div>
 <div class="testimonial-item"><p class="testimonial-quote">The most thoughtful gift I have ever given. My mother held it for ten minutes without saying a word. No face needed — it was unmistakably her.</p><p class="testimonial-author">— James K., Boston, Massachusetts</p></div>
 <div class="testimonial-item"><p class="testimonial-quote">Faceless and yet more him than any photograph. I still can't believe it's clay.</p><p class="testimonial-author">— Diane F., Portsmouth, New Hampshire</p></div>
 <div class="testimonial-item"><p class="testimonial-quote">My grandmother whispered 'that is me.' No eyes, no mouth — and still she knew. Sharon's work is extraordinary.</p><p class="testimonial-author">— Sarah M., Amsterdam, Netherlands</p></div>
@@ -139,6 +138,18 @@ tc.addEventListener("click",function(){window.location.href="testimonials.html";
 document.querySelectorAll("#tDots span").forEach(function(d){d.addEventListener("click",function(e){e.stopPropagation();tGoTo(parseInt(d.dataset.idx));});});
 function _checkReveals(){document.querySelectorAll(".reveal:not(.visible)").forEach(function(r){var rect=r.getBoundingClientRect();if(rect.top<window.innerHeight-40)r.classList.add("visible");});};
 _checkReveals();window.addEventListener("scroll",_checkReveals,{passive:true});
+(function(){var lb=document.getElementById("langBtn"),lm=document.getElementById("langMenu");
+if(lb&&lm){
+  lb.addEventListener("click",function(e){e.stopPropagation();lm.style.display=lm.style.display==="none"?"block":"none";});
+  document.addEventListener("click",function(){if(lm)lm.style.display="none";});
+}
+function doTranslate(lang){
+  var lm2=document.getElementById("langMenu");if(lm2)lm2.style.display="none";
+  if(lang==="en"){document.cookie="googtrans=;path=/;expires=Thu,01 Jan 1970 00:00:00 GMT";document.cookie="googtrans=;path=/;domain="+location.hostname+";expires=Thu,01 Jan 1970 00:00:00 GMT";location.reload();return;}
+  document.cookie="googtrans=/en/"+lang+";path=/";document.cookie="googtrans=/en/"+lang+";path=/;domain="+location.hostname;
+  var sel=document.querySelector(".goog-te-combo");if(sel){sel.value=lang;sel.dispatchEvent(new Event("change"));}else{location.reload();}
+}
+})();
 </script>
 </body>
 </html>

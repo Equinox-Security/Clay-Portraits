@@ -16,7 +16,7 @@ var CONFIG = {
   "colorInk": "#1c1712",
   "fontHeadline": "Playfair Display",
   "fontBody": "Cormorant Garamond",
-  "fontUI": "body",
+  "fontUI": "jost",
   "demoMode": false,
   "demoName": "EQ Enterprise",
   "demoEmail": "Equinox68@gmail.com",
@@ -55,41 +55,54 @@ var CONFIG = {
   "aboutTeaserBody": "Each portrait begins with your photograph and ends as something you will pass down. No molds. No shortcuts. Just hands, clay, and care.",
   "aboutTeaserBtn": "Meet Sharon",
   "aboutTeaserLink": "about.html",
-  "galleryItems": [
+  "galleryPortraits": [
     {
       "type": "photo",
       "url": "portrait1.png",
-      "caption": "Family portrait",
-      "pieceType": "Clay portrait"
+      "caption": "Family portrait"
     },
     {
       "type": "photo",
       "url": "portrait2.png",
-      "caption": "Mother and daughter",
-      "pieceType": "Clay portrait"
+      "caption": "Mother and daughter"
     },
     {
       "type": "photo",
       "url": "portrait3.png",
-      "caption": "Couple portrait",
-      "pieceType": "Clay portrait"
+      "caption": "Couple portrait"
     },
     {
       "type": "photo",
       "url": "portrait4.png",
-      "caption": "Grandmother portrait",
-      "pieceType": "Clay portrait"
+      "caption": "Grandmother portrait"
     },
     {
       "type": "photo",
       "url": "portrait5.png",
-      "caption": "Memorial portrait",
-      "pieceType": "Clay portrait"
+      "caption": "Memorial portrait"
     }
   ],
+  "galleryLandscapes": [
+    {
+      "type": "photo",
+      "url": "landscape1.png",
+      "caption": "Landscape commission"
+    }
+  ],
+  "galleryMagnets": [
+    {
+      "type": "photo",
+      "url": "magnet1.png",
+      "caption": "Keepsake magnet"
+    }
+  ],
+  "galleryItems": [],
   "frameSlideshow": "arch",
-  "frameGallery": "oval",
-  "frameTestimonials": "circle",
+  "framePortraits": "oval",
+  "frameLandscapes": "rounded",
+  "frameMagnets": "circle",
+  "frameGallery": "arch",
+  "frameTestimonials": "arch",
   "frameAbout": "rounded",
   "commHeadline": "Commission a\nPortrait",
   "commIntro": "Send me a photograph. I will send you back something you will keep for the rest of your life.",
@@ -102,8 +115,8 @@ var CONFIG = {
   "commCurrency": "€",
   "testimonials": [
     {
-      "name": "Michelle D.",
-      "location": "Concord, New Hampshire",
+      "name": "Michelle R.",
+      "location": "Dover, New Hampshire",
       "quote": "I cried when I opened it. I knew immediately it was us — without a single face. She captured everything else.",
       "pieceLabel": "Family portrait",
       "photoUrl": "portrait1.png",
@@ -147,17 +160,13 @@ var CONFIG = {
       "stars": 5
     }
   ],
-  "showStars": true,
+  "showStars": false,
   "aboutName": "Sharon",
   "aboutBio": "Sharon is a self-taught polymer clay artist based in the Netherlands, whose work has quietly found its way into homes across Europe and beyond.\n\nEvery portrait begins with a conversation and a photograph. What comes next is entirely Sharon's — hours of careful observation, sculpting, and refinement until the piece looks not just like the person, but like them.\n\nIn 2024, a celebrity in the Netherlands discovered her work and commissioned a portrait. The piece confirmed what her clients had known for years: this is not craft. It is art.",
   "aboutPhotos": [
     {
-      "url": "portrait1.png",
+      "url": "about1.png",
       "alt": "Sharon sculpting a portrait at her studio"
-    },
-    {
-      "url": "portrait2.png",
-      "alt": "Close-up of hands working on clay"
     }
   ],
   "contactEmail": "sharon@gmail.com",
@@ -169,10 +178,10 @@ var CONFIG = {
   "policyPayment": "A 50% non-refundable deposit is required to begin any commission. The remaining balance is due before your portrait is shipped.\n\nCancellations before work begins may be eligible for a partial refund at my discretion.",
   "policyCopyright": "Each portrait I create is an original work of art. I retain the right to photograph my work and share images on my website and social media.\n\nYou own the physical piece. You do not acquire the copyright to the artwork itself.",
   "showPricing": true,
-  "showAvailability": false,
-  "availStatus": "",
-  "availLeadtime": "",
+  "showAvailability": true,
+  "availStatus": "Currently accepting new commissions",
+  "availLeadtime": "4-6 weeks from deposit to delivery",
   "availNotes": "",
   "showCare": true,
-  "showGifts": true
+  "showGifts": false
 };
