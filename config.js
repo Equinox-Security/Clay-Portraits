@@ -115,7 +115,7 @@ var CONFIG = {
   "commCurrency": "€",
   "testimonials": [
     {
-      "name": "Samuel Jackson",
+      "name": "Bobby Reuleaux",
       "location": "Manchester, New Hampshire",
       "quote": "I cried when I opened it. I knew immediately it was us — without a single face. She captured everything else.",
       "pieceLabel": "Family portrait",
@@ -178,10 +178,10 @@ var CONFIG = {
   "policyPayment": "A 50% non-refundable deposit is required to begin any commission. The remaining balance is due before your portrait is shipped.\n\nCancellations before work begins may be eligible for a partial refund at my discretion.",
   "policyCopyright": "Each portrait I create is an original work of art. I retain the right to photograph my work and share images on my website and social media.\n\nYou own the physical piece. You do not acquire the copyright to the artwork itself.",
   "showPricing": true,
-  "showAvailability": true,
+  "showAvailability": false,
   "availStatus": "Currently accepting new commissions",
   "availLeadtime": "4-6 weeks from deposit to delivery",
   "availNotes": "",
   "showCare": true,
-  "showGifts": false
+  "showGifts": true
 };

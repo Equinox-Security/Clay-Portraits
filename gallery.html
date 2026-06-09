@@ -21,14 +21,12 @@
   <a href="contact.html">Contact</a>
   <a href="policies.html">Policies</a>
   <a href="care.html">Care Instructions</a>
+  <a href="gift-certificates.html">Gift Certificates</a>
   <span class="nav-close-hint">Press ESC or tap anywhere to close</span>
 </nav>
 <header id="siteHeader">
   <a class="site-name" href="index.html">Sharon's Clay Portraits</a>
-  <div style="display:flex;align-items:center;gap:1rem;">
-  <div id="google_translate_element"></div>
   <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
-  </div>
 </header>
 <div id="glb" style="position:fixed;inset:0;z-index:300;background:rgba(0,0,0,0.92);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem;opacity:0;pointer-events:none;transition:opacity 0.4s;"><button onclick="closeGLB()" style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;cursor:pointer;color:rgba(240,235,226,0.5);font-size:2rem;line-height:1;">&times;</button><div style="width:min(600px,90vw);max-height:85vh;border-radius:12px;overflow:hidden;box-shadow:0 8px 64px rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;"><img id="glbImg" src="" alt="" style="max-width:100%;max-height:85vh;object-fit:contain;display:none;"/><div id="glbBg" style="width:300px;height:300px;background:var(--arch-bg);border-radius:8px;"></div></div><p id="glbCap" style="margin-top:1.5rem;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;color:rgba(240,235,226,0.7);text-align:center;"></p></div>
 <div class="page-header"><p class="page-eyebrow">Handcrafted portraits</p><h1 class="page-title">The <em>Gallery</em></h1><p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:var(--ink-soft);max-width:400px;margin:0 auto;">Each piece began as a photograph and became something irreplaceable.</p></div>
@@ -43,6 +41,13 @@
     <a href="policies.html">Policies</a>
   </div>
   <p style="font-family:'Jost',sans-serif;font-size:0.7rem;color:var(--muted);letter-spacing:0.08em;">&copy; 2026 Sharon's Clay Portraits &nbsp;&bull;&nbsp; All rights reserved</p>
+  <div id="translateWrap" style="margin-top:1.5rem;display:inline-flex;align-items:center;gap:0.75rem;flex-wrap:wrap;justify-content:center;">
+<svg width="14" height="14" fill="none" stroke="var(--clay)" stroke-width="1.5" viewBox="0 0 24 24">
+<circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+<div id="google_translate_element"></div>
+<a href="javascript:void(0)" onclick="var c=document.querySelector('.goog-te-combo');if(c){c.value='';c.dispatchEvent(new Event('change')); }else{document.cookie='googtrans=;expires=Thu,01 Jan 1970 00:00:00 GMT;path=/';location.reload();}" style="font-family:'Jost',sans-serif;font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--border);">Show original</a>
+</div>
+
 </footer>
 <script>
 function openGLB(url,cap){var lb=document.getElementById("glb"),img=document.getElementById("glbImg"),bg=document.getElementById("glbBg");if(url){img.src=url;img.style.display="block";bg.style.display="none";}else{img.style.display="none";bg.style.display="block";}document.getElementById("glbCap").textContent=cap||"";lb.style.opacity="1";lb.style.pointerEvents="all";document.body.style.overflow="hidden";}

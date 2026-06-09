@@ -6,10 +6,10 @@
 <title>Gift Certificates — Sharon's Clay Portraits</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" media="print" onload="this.media='all';"/>
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap"/></noscript>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" media="print" onload="this.media='all';"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap"/></noscript>
 <link rel="stylesheet" href="style.css"/>
-<script>function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:"en",includedLanguages:"nl,de,fr,es,it,pl,pt,da,sv,fi,nb",layout:google.translate.TranslateElement.InlineLayout.SIMPLE},"google_translate_element");}window.addEventListener("load",function(){var s=document.createElement("script");s.src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";document.head.appendChild(s);});</script>
+<script>function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:"en",includedLanguages:"nl,de,fr,es,it,pl,pt,da,sv,fi,nb"},"google_translate_element");}window.addEventListener("load",function(){var s=document.createElement("script");s.src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";document.head.appendChild(s);});</script>
 </head>
 <body>
 <nav class="nav-overlay" id="navOverlay">
@@ -42,7 +42,13 @@
     <a href="policies.html">Policies</a>
   </div>
   <p style="font-family:'Jost',sans-serif;font-size:0.7rem;color:var(--muted);letter-spacing:0.08em;">&copy; 2026 Sharon's Clay Portraits &nbsp;&bull;&nbsp; All rights reserved</p>
-  <div id="google_translate_element" style="margin-top:1rem;"></div>
+  <div id="translateWrap" style="margin-top:1.5rem;display:inline-flex;align-items:center;gap:0.75rem;flex-wrap:wrap;justify-content:center;">
+<svg width="14" height="14" fill="none" stroke="var(--clay)" stroke-width="1.5" viewBox="0 0 24 24">
+<circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+<div id="google_translate_element"></div>
+<a href="javascript:void(0)" onclick="var c=document.querySelector('.goog-te-combo');if(c){c.value='';c.dispatchEvent(new Event('change')); }else{document.cookie='googtrans=;expires=Thu,01 Jan 1970 00:00:00 GMT;path=/';location.reload();}" style="font-family:'Jost',sans-serif;font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--border);">Show original</a>
+</div>
+
 </footer>
 <script>
 var _hbg=document.getElementById("hamburger"),_nov=document.getElementById("navOverlay");
@@ -50,6 +56,34 @@ _hbg.addEventListener("click",function(){var o=_nov.classList.toggle("open");_hb
 _nov.addEventListener("click",function(e){if(e.target===_nov||e.target.classList.contains("nav-close-hint")){_nov.classList.remove("open");_hbg.classList.remove("open");document.body.style.overflow="";}});
 document.addEventListener("keydown",function(e){if(e.key==="Escape"){_nov.classList.remove("open");_hbg.classList.remove("open");document.body.style.overflow="";}});
 window.addEventListener("scroll",function(){document.getElementById("siteHeader").classList.toggle("scrolled",window.scrollY>60);},{passive:true});
+(function(){
+function doTranslate(lang){
+  var lm2=document.getElementById("langMenu");if(lm2)lm2.style.display="none";
+  var sel=document.querySelector(".goog-te-combo");
+  if(sel){
+    if(lang==="en"){sel.value="";sel.dispatchEvent(new Event("change"));}
+    else{sel.value=lang;sel.dispatchEvent(new Event("change"));}
+    return;
+  }
+  var _tries=0;
+  var _t=setInterval(function(){
+    var sel2=document.querySelector(".goog-te-combo");
+    if(sel2){
+      clearInterval(_t);
+      if(lang==="en"){sel2.value="";sel2.dispatchEvent(new Event("change"));}
+      else{sel2.value=lang;sel2.dispatchEvent(new Event("change"));}
+    } else if(++_tries>15){
+      clearInterval(_t);
+      if(lang==="en"){
+        document.cookie="googtrans=;path=/;expires=Thu,01 Jan 1970 00:00:00 GMT";
+      } else {
+        document.cookie="googtrans=/en/"+lang+";path=/";
+      }
+      location.reload();
+    }
+  },200);
+}
+})();
 function _checkReveals(){document.querySelectorAll(".reveal:not(.visible)").forEach(function(r){var rect=r.getBoundingClientRect();if(rect.top<window.innerHeight-40)r.classList.add("visible");});};
 _checkReveals();window.addEventListener("scroll",_checkReveals,{passive:true});
 </script>
