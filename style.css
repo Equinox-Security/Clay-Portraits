@@ -2,11 +2,6 @@
 @font-face{font-family:"Playfair Display";font-display:swap;}
 @font-face{font-family:"Cormorant Garamond";font-display:swap;}
 @font-face{font-family:"Jost";font-display:swap;}
-#google_translate_element{display:flex;align-items:center;}
-.goog-te-gadget{font-family:"Jost",sans-serif!important;font-size:0!important;color:transparent!important;}
-.goog-te-gadget .goog-te-combo{font-family:"Jost",sans-serif;font-size:0.68rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink);border:1px solid var(--border);border-radius:6px;padding:0.3rem 0.5rem;background:transparent;cursor:pointer;outline:none;}
-.goog-te-banner-frame{display:none!important;}
-body{top:0!important;}
 :root{--parchment:#f0ebe2;--parchment-dark:#29241e;--parchment-mid:#29241e;--ink:#1c1712;--ink-soft:#918c84;--clay:#b07d5a;--clay-light:#c8a48c;--clay-pale:#ba8e6e;--muted:#66615b;--border:rgba(28,23,18,0.12);--nav-bg:#2d4a3e;--arch-bg:#c4a882;--shadow:0 2px 20px rgba(0,0,0,0.08),0 1px 4px rgba(0,0,0,0.05);}
 html{scroll-behavior:smooth;}body{background:var(--parchment);color:var(--ink);font-family:"Cormorant Garamond",Georgia,"Times New Roman",serif;font-size:18px;line-height:1.6;overflow-x:hidden;}
 .demo-banner{position:relative;z-index:200;font-family:"Jost",sans-serif;}
@@ -85,11 +80,3 @@ footer{border-top:1px solid var(--border);padding:3rem 2rem;text-align:center;}
 .reveal{opacity:0;transform:translateY(20px);transition:opacity 0.7s cubic-bezier(0.4,0,0.2,1),transform 0.7s cubic-bezier(0.4,0,0.2,1);}
 .reveal.visible{opacity:1;transform:none;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
-.goog-te-banner-frame{display:none!important;visibility:hidden!important;}
-.goog-te-ftab-float{display:none!important;}
-body{top:0!important;position:static!important;}
-html body{margin-top:0!important;}
-.skiptranslate{display:none!important;}
-iframe.goog-te-banner-frame{display:none!important;}
-#translateWrap .goog-te-gadget{font-family:"Jost",sans-serif!important;font-size:0!important;color:transparent!important;}
-#translateWrap .goog-te-gadget .goog-te-combo{font-family:"Jost",sans-serif;font-size:0.72rem;font-weight:500;letter-spacing:0.08em;color:var(--ink);border:1px solid var(--border);border-radius:6px;padding:0.3rem 0.6rem;background:transparent;cursor:pointer;outline:none;}

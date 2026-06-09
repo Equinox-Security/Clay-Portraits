@@ -98,7 +98,7 @@ var CONFIG = {
   ],
   "galleryItems": [],
   "frameSlideshow": "arch",
-  "framePortraits": "arch",
+  "framePortraits": "circle",
   "frameLandscapes": "rounded",
   "frameMagnets": "circle",
   "frameGallery": "arch",
@@ -115,8 +115,8 @@ var CONFIG = {
   "commCurrency": "€",
   "testimonials": [
     {
-      "name": "Bobby Reuleaux",
-      "location": "Manchester, New Hampshire",
+      "name": "Bobby Reuleaux ",
+      "location": "Manchester, England",
       "quote": "I cried when I opened it. I knew immediately it was us — without a single face. She captured everything else.",
       "pieceLabel": "Family portrait",
       "photoUrl": "portrait1.png",
@@ -172,7 +172,7 @@ var CONFIG = {
   "contactEmail": "sharon@gmail.com",
   "contactFormspree": "abcd1234",
   "contactAddress": "Netherlands",
-  "showTranslate": true,
+  "showTranslate": false,
   "policyShipping": "All portraits are shipped worldwide from the Netherlands. Shipping is included in the price of every commission.\n\nAs each piece is custom-made, I do not accept returns. If a piece arrives damaged in transit, please contact me within 48 hours with photos and I will work with you to resolve it.",
   "policyPrivacy": "I collect only the information necessary to complete your commission.\n\nI will never sell or share your personal information with third parties. The photograph you send is deleted after the piece is complete.",
   "policyPayment": "A 50% non-refundable deposit is required to begin any commission. The remaining balance is due before your portrait is shipped.\n\nCancellations before work begins may be eligible for a partial refund at my discretion.",
