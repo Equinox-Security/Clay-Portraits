@@ -183,5 +183,6 @@ var CONFIG = {
   "availLeadtime": "4-6 weeks from deposit to delivery",
   "availNotes": "",
   "showCare": true,
-  "showGifts": true
+  "showGifts": true,
+  "_lang": "nl"
 };
