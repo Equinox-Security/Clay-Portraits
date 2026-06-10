@@ -71,7 +71,7 @@ footer{border-top:1px solid var(--border);padding:3rem 2rem;text-align:center;}
 .social-row{display:flex;justify-content:center;gap:1.25rem;margin-bottom:1.5rem;}
 .social-row a{color:var(--muted);transition:color 0.2s;text-decoration:none;}
 .frame-arch{border-radius:50% 50% 0 0/40% 40% 0 0 !important;}
-.t-arch{border-radius:50%;}
+.t-arch{border-radius:50% 50% 0 0/40% 40% 0 0;}
 .frame-circle{border-radius:50% !important;}
 .frame-rounded{border-radius:16px !important;}
 .frame-square{border-radius:4px !important;}

@@ -1,8 +1,8 @@
 var CONFIG = {
   "bizName": "Sharon's Clay Portraits",
   "bizShort": "Sharon Clay",
-  "tagline": "Custom clay portraits — handcrafted from your photograph",
-  "location": "Netherlands",
+  "tagline": "Handgemaakt van uw foto — volledig met de hand",
+  "location": "Nederland",
   "bizType": "commission-only",
   "instagram": "",
   "facebook": "",
@@ -18,170 +18,248 @@ var CONFIG = {
   "fontBody": "Cormorant Garamond",
   "fontUI": "jost",
   "demoMode": false,
-  "demoName": "EQ Enterprise",
-  "demoEmail": "Equinox68@gmail.com",
-  "demoPhone": "603-555-1212",
+  "demoName": "",
+  "demoEmail": "",
+  "demoPhone": "",
   "demoContactUrl": "",
   "demoOfferUrl": "",
-  "heroEyebrow": "Handcrafted · One of a Kind",
-  "heroHeadline": "Custom clay\nportraits",
-  "heroSub": "Every figure tells a story. I sculpt yours — from a single photograph, entirely by hand.",
-  "heroCta": "Commission a Portrait",
+  "heroEyebrow": "Handgemaakt · Uniek",
+  "heroHeadline": "Aangepaste klei\nportretten",
+  "heroSub": "Elk figuur vertelt een verhaal. Ik beeldhouw het uwe — van een enkele foto, volledig met de hand.",
+  "heroCta": "Portret bestellen",
   "heroCtaLink": "commissions.html",
   "slideshowImgs": [
     {
       "url": "portrait1.png",
-      "caption": "Custom clay portrait — commission yours today"
+      "caption": "Aangepast kleien portret — besteld van uw foto"
     },
     {
       "url": "portrait2.png",
-      "caption": "Every detail sculpted by hand from your photograph"
+      "caption": "Elk detail met de hand geboetseerd"
     },
     {
       "url": "portrait3.png",
-      "caption": "A gift they will display and treasure forever"
+      "caption": "Een cadeau dat voor altijd wordt bewaard"
     },
     {
       "url": "portrait4.png",
-      "caption": "Wall-mounted or displayed — each piece is unique"
+      "caption": "Muurkunst voor in huis — met de hand gemaakt"
     },
     {
       "url": "portrait5.png",
-      "caption": "No two pieces are ever the same"
+      "caption": "Van foto naar iets onvervangbaars"
     }
   ],
-  "aboutTeaserLabel": "The artist",
-  "aboutTeaserHeading": "Sculpted\nwith intention",
-  "aboutTeaserBody": "Each portrait begins with your photograph and ends as something you will pass down. No molds. No shortcuts. Just hands, clay, and care.",
-  "aboutTeaserBtn": "Meet Sharon",
+  "aboutTeaserLabel": "De kunstenaar",
+  "aboutTeaserHeading": "Beeldhouwd\nmet intentie",
+  "aboutTeaserBody": "Elk portret begint met uw foto en eindigt als iets dat u doorgeeft. Geen mallen. Geen snelkoppelingen. Alleen handen, klei en zorg.",
+  "aboutTeaserBtn": "Maak kennis met Sharon",
   "aboutTeaserLink": "about.html",
   "galleryPortraits": [
     {
       "type": "photo",
       "url": "portrait1.png",
-      "caption": "Family portrait"
+      "caption": "Familieportret"
     },
     {
       "type": "photo",
       "url": "portrait2.png",
-      "caption": "Mother and daughter"
+      "caption": "Portret moeder en dochter"
     },
     {
       "type": "photo",
       "url": "portrait3.png",
-      "caption": "Couple portrait"
+      "caption": "Koppelportret"
     },
     {
       "type": "photo",
       "url": "portrait4.png",
-      "caption": "Grandmother portrait"
+      "caption": "Portret van grootmoeder"
     },
     {
       "type": "photo",
       "url": "portrait5.png",
-      "caption": "Memorial portrait"
+      "caption": "Herdenkingsportret"
     }
   ],
   "galleryLandscapes": [
     {
       "type": "photo",
       "url": "landscape1.png",
-      "caption": "Landscape commission"
+      "caption": "Landschapsopdracht"
     }
   ],
   "galleryMagnets": [
     {
       "type": "photo",
       "url": "magnet1.png",
-      "caption": "Keepsake magnet"
+      "caption": "Aandenkenmagnet"
     }
   ],
   "galleryItems": [],
   "frameSlideshow": "arch",
-  "framePortraits": "circle",
+  "framePortraits": "arch",
   "frameLandscapes": "rounded",
   "frameMagnets": "circle",
   "frameGallery": "arch",
-  "frameTestimonials": "circle",
-  "frameAbout": "rounded",
-  "commHeadline": "Commission a\nPortrait",
-  "commIntro": "Send me a photograph. I will send you back something you will keep for the rest of your life.",
-  "processSteps": [],
-  "pricingTiers": [],
-  "faqItems": [],
+  "frameTestimonials": "arch",
+  "frameAbout": "circle",
+  "commHeadline": "Portret\nbestellen",
+  "commIntro": "Stuur mij een foto. Ik stuur u iets terug dat u de rest van uw leven zult bewaren.",
+  "processSteps": [
+    {
+      "title": "Stuur uw foto",
+      "body": "Stuur mij een heldere foto van uw onderwerp. Een goed verlichte foto van voren werkt het beste."
+    },
+    {
+      "title": "Bespreking & contract",
+      "body": "We bespreken de details — formaat, stijl en leverdatum. U ontvangt een contract en betaalt de aanbetaling om te beginnen."
+    },
+    {
+      "title": "Ik ga aan het werk",
+      "body": "Uw portret wordt volledig met de hand geboetseerd uit hoogwaardig polymeerklei. U ontvangt een vooruitgangsupdate halverwege."
+    },
+    {
+      "title": "Goedkeuring & verzending",
+      "body": "U keurt het eindresultaat goed voordat ik verzend. Uw portret wordt zorgvuldig verpakt en wereldwijd verzonden."
+    }
+  ],
+  "pricingTiers": [
+    {
+      "name": "Eén persoon",
+      "desc": "Eén figuur, één onderwerp",
+      "price": "150",
+      "note": "Meest besteld",
+      "features": [
+        "Eén figuur volledig met de hand geboetseerd",
+        "Gebaseerd op één foto naar keuze",
+        "Geleverd op een decoratief bord klaar om op te hangen",
+        "Verpakking en wereldwijde verzending inbegrepen"
+      ],
+      "featured": false
+    },
+    {
+      "name": "Twee personen",
+      "desc": "Koppel of twee figuren",
+      "price": "225",
+      "note": "Populair cadeau",
+      "features": [
+        "Twee figuren volledig met de hand geboetseerd",
+        "Gebaseerd op uw foto's",
+        "Geleverd op een decoratief bord klaar om op te hangen",
+        "Verpakking en wereldwijde verzending inbegrepen"
+      ],
+      "featured": true
+    },
+    {
+      "name": "Familie",
+      "desc": "Drie tot vijf personen",
+      "price": "295",
+      "note": "",
+      "features": [
+        "Drie tot vijf figuren volledig met de hand geboetseerd",
+        "Gebaseerd op uw familiefoto",
+        "Geleverd op een decoratief bord klaar om op te hangen",
+        "Verpakking en wereldwijde verzending inbegrepen"
+      ],
+      "featured": false
+    }
+  ],
+  "faqItems": [
+    {
+      "question": "Welke foto moet ik opsturen?",
+      "answer": "Een heldere foto van voren, bij voorkeur bij goed daglicht. Hoe duidelijker de foto, hoe meer details ik kan opnemen. Ik werk met één hoofdfoto maar u mag ook aanvullende foto's meeSturen."
+    },
+    {
+      "question": "Hoe lang duurt het?",
+      "answer": "De gemiddelde levertijd is 4 tot 6 weken na ontvangst van de aanbetaling en de goedgekeurde foto. Spoedbestellingen zijn mogelijk — neem contact op voor beschikbaarheid."
+    },
+    {
+      "question": "Kan ik een huisdier laten maken?",
+      "answer": "Ja, huisdierfiguren zijn mogelijk als toevoeging aan een familieportret. Neem contact op om de mogelijkheden te bespreken."
+    },
+    {
+      "question": "Wat als ik niet tevreden ben?",
+      "answer": "Uw tevredenheid is mijn prioriteit. Ik stuur een foto ter goedkeuring voordat ik verzend. Kleine aanpassingen zijn kosteloos. Als het portret beschadigd aankomt door verzending, werk ik samen met u aan een oplossing."
+    },
+    {
+      "question": "Lever je wereldwijd?",
+      "answer": "Ja, ik verzend naar alle landen. Verzendkosten zijn inbegrepen in de prijs. De levertijd na verzending varieert per land."
+    }
+  ],
   "commHeroImage": "portrait1.png",
   "commFormspree": "abcd1234",
   "commDeposit": "50",
   "commCurrency": "€",
   "testimonials": [
     {
-      "name": "Bobby Reuleaux ",
-      "location": "Manchester, England",
-      "quote": "I cried when I opened it. I knew immediately it was us — without a single face. She captured everything else.",
-      "pieceLabel": "Family portrait",
+      "name": "Michelle D.",
+      "location": "Amsterdam, Nederland",
+      "quote": "Ik huilde toen ik het opende. Ik wist meteen dat wij het waren — zonder één gezicht. Ze heeft alles wat telt gevangen.",
       "photoUrl": "portrait1.png",
       "videoUrl": "",
-      "stars": 5
+      "stars": 5,
+      "pieceLabel": "Familieportret"
     },
     {
-      "name": "James K.",
-      "location": "Boston, Massachusetts",
-      "quote": "The most thoughtful gift I have ever given. My mother held it for ten minutes without saying a word. No face needed — it was unmistakably her.",
-      "pieceLabel": "Portrait of her mother",
+      "name": "Thomas B.",
+      "location": "Brussel, België",
+      "quote": "Het meest attente cadeau dat ik ooit heb gegeven. Mijn moeder hield het tien minuten vast zonder een woord te zeggen. Geen gezicht nodig — het was onmiskenbaar zij.",
       "photoUrl": "portrait2.png",
       "videoUrl": "",
-      "stars": 5
-    },
-    {
-      "name": "Diane F.",
-      "location": "Portsmouth, New Hampshire",
-      "quote": "Faceless and yet more him than any photograph. I still can't believe it's clay.",
-      "pieceLabel": "Portrait of her husband",
-      "photoUrl": "portrait3.png",
-      "videoUrl": "",
-      "stars": 5
-    },
-    {
-      "name": "Sarah M.",
-      "location": "Amsterdam, Netherlands",
-      "quote": "My grandmother whispered 'that is me.' No eyes, no mouth — and still she knew. Sharon's work is extraordinary.",
-      "pieceLabel": "Portrait of her grandmother",
-      "photoUrl": "portrait4.png",
-      "videoUrl": "",
-      "stars": 5
+      "stars": 5,
+      "pieceLabel": "Portret van haar moeder"
     },
     {
       "name": "Katrien V.",
-      "location": "Brussels, Belgium",
-      "quote": "She captured the way he always stood, the way he held his hands. I did not need a face. I needed him. And here he is.",
-      "pieceLabel": "Memorial portrait",
+      "location": "Gent, België",
+      "quote": "Ze heeft gevangen hoe hij altijd stond, hoe hij zijn handen hield. Ik had geen gezicht nodig. Ik had hem nodig. En hier is hij.",
+      "photoUrl": "portrait3.png",
+      "videoUrl": "",
+      "stars": 5,
+      "pieceLabel": "Herdenkingsportret"
+    },
+    {
+      "name": "Sarah M.",
+      "location": "Rotterdam, Nederland",
+      "quote": "Mijn oma fluisterde: 'Dat ben ik toch?' Geen ogen, geen mond — en toch wist ze het. Sharons werk is buitengewoon.",
+      "photoUrl": "portrait4.png",
+      "videoUrl": "",
+      "stars": 5,
+      "pieceLabel": "Portret van haar grootmoeder"
+    },
+    {
+      "name": "Lucas F.",
+      "location": "Utrecht, Nederland",
+      "quote": "Gezichtsloos en toch meer hij dan welke foto ook. Ik kan nog steeds niet geloven dat het klei is.",
       "photoUrl": "portrait5.png",
       "videoUrl": "",
-      "stars": 5
+      "stars": 5,
+      "pieceLabel": "Portret van haar man"
     }
   ],
   "showStars": false,
   "aboutName": "Sharon",
-  "aboutBio": "Sharon is a self-taught polymer clay artist based in the Netherlands, whose work has quietly found its way into homes across Europe and beyond.\n\nEvery portrait begins with a conversation and a photograph. What comes next is entirely Sharon's — hours of careful observation, sculpting, and refinement until the piece looks not just like the person, but like them.\n\nIn 2024, a celebrity in the Netherlands discovered her work and commissioned a portrait. The piece confirmed what her clients had known for years: this is not craft. It is art.",
+  "aboutBio": "Sharon is een zelfgeleerde polymeerklei kunstenaar uit Nederland, wiens werk zijn weg heeft gevonden naar huizen in heel Europa en daarbuiten.\n\nElk portret begint met een gesprek en een foto. Wat volgt is Sharons eigen werkwijze — uren van zorgvuldige observatie, boetseren en verfijning totdat het stuk er niet alleen uitziet als de persoon, maar als henzelf.\n\nIn 2024 ontdekte een bekendheid in Nederland haar werk en bestelde een portret. Het stuk bevestigde wat haar klanten al jaren wisten: dit is geen ambacht. Het is kunst.",
   "aboutPhotos": [
     {
       "url": "about1.png",
-      "alt": "Sharon sculpting a portrait at her studio"
+      "alt": "Sharon aan het werk in haar atelier"
     }
   ],
   "contactEmail": "sharon@gmail.com",
   "contactFormspree": "abcd1234",
-  "contactAddress": "Netherlands",
+  "contactAddress": "Nederland",
   "showTranslate": false,
-  "policyShipping": "All portraits are shipped worldwide from the Netherlands. Shipping is included in the price of every commission.\n\nAs each piece is custom-made, I do not accept returns. If a piece arrives damaged in transit, please contact me within 48 hours with photos and I will work with you to resolve it.",
-  "policyPrivacy": "I collect only the information necessary to complete your commission.\n\nI will never sell or share your personal information with third parties. The photograph you send is deleted after the piece is complete.",
-  "policyPayment": "A 50% non-refundable deposit is required to begin any commission. The remaining balance is due before your portrait is shipped.\n\nCancellations before work begins may be eligible for a partial refund at my discretion.",
-  "policyCopyright": "Each portrait I create is an original work of art. I retain the right to photograph my work and share images on my website and social media.\n\nYou own the physical piece. You do not acquire the copyright to the artwork itself.",
+  "policyShipping": "Alle portretten worden wereldwijd verzonden vanuit Nederland. Verzendkosten zijn inbegrepen in de prijs van elke opdracht.\n\nElk stuk is op maat gemaakt en wordt zorgvuldig verpakt. Ik accepteer geen retourzendingen. Als een stuk beschadigd aankomt tijdens het transport, neem dan binnen 48 uur contact met mij op met foto's en ik werk samen met u aan een oplossing.",
+  "policyPrivacy": "Ik verzamel alleen de informatie die nodig is om uw opdracht te voltooien.\n\nIk zal uw persoonlijke gegevens nooit verkopen of delen met derden. De foto die u opstuurt wordt verwijderd nadat het stuk is voltooid.",
+  "policyPayment": "Een niet-restitueerbare aanbetaling van 50% is vereist om met een opdracht te beginnen. Het resterende bedrag is verschuldigd voordat uw portret wordt verzonden.\n\nAnnuleringen voordat het werk begint kunnen in aanmerking komen voor een gedeeltelijke terugbetaling naar mijn goeddunken.",
+  "policyCopyright": "U bent eigenaar van het fysieke stuk. U verwerft niet het auteursrecht op het kunstwerk zelf.\n\nIk behoud het recht om foto's van mijn werk te gebruiken voor portfolio- en marketingdoeleinden, tenzij u uitdrukkelijk anders verzoekt.",
   "showPricing": true,
   "showAvailability": true,
-  "availStatus": "Currently accepting new commissions",
-  "availLeadtime": "4-6 weeks from deposit to delivery",
-  "availNotes": "",
+  "availStatus": "Momenteel nieuwe opdrachten aanvaarden",
+  "availLeadtime": "4–6",
+  "availNotes": "Spoedbestellingen zijn mogelijk — neem contact op voor beschikbaarheid.",
   "showCare": true,
   "showGifts": true,
   "_lang": "nl"
