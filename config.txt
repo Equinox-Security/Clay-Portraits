@@ -261,6 +261,5 @@ var CONFIG = {
   "availLeadtime": "4–6",
   "availNotes": "Spoedbestellingen zijn mogelijk — neem contact op voor beschikbaarheid.",
   "showCare": true,
-  "showGifts": true,
-  "_lang": "nl"
+  "showGifts": true
 };
