@@ -4,6 +4,9 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Sharon's Clay Portraits — Sharon's Clay Portraits</title>
+<link rel="manifest" href="manifest.json"/>
+<link rel="icon" href="icon-192.png" type="image/png"/>
+<link rel="apple-touch-icon" href="apple-touch-icon.png"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" media="print" onload="this.media='all';"/>
@@ -11,6 +14,7 @@
 <link rel="stylesheet" href="style.css"/>
 <body>
 <nav class="nav-overlay" id="navOverlay">
+  <a href="#" onclick="installApp();return false;">Add to Home Screen</a>
   <a href="index.html">Home</a>
   <a href="gallery.html">Gallery</a>
   <a href="commissions.html">Commission a Portrait</a>
@@ -82,6 +86,21 @@
 </footer>
 <script>
 var _hbg=document.getElementById("hamburger"),_nov=document.getElementById("navOverlay");
+var deferredInstallPrompt=null;
+window.addEventListener("beforeinstallprompt",function(e){e.preventDefault();deferredInstallPrompt=e;});
+function installApp(){
+  var isIOS=/iphone|ipad|ipod/i.test(navigator.userAgent);
+  if(isIOS){
+    alert("To install: tap the Share icon, then \"Add to Home Screen\".");
+    return;
+  }
+  if(deferredInstallPrompt){
+    deferredInstallPrompt.prompt();
+    deferredInstallPrompt.userChoice.then(function(){deferredInstallPrompt=null;});
+  } else {
+    alert("To install: open your browser menu and choose \"Install app\" or \"Add to Home Screen\".");
+  }
+}
 _hbg.addEventListener("click",function(){var o=_nov.classList.toggle("open");_hbg.classList.toggle("open",o);document.body.style.overflow=o?"hidden":"";});
 _nov.addEventListener("click",function(e){if(e.target===_nov||e.target.classList.contains("nav-close-hint")){_nov.classList.remove("open");_hbg.classList.remove("open");document.body.style.overflow="";}});
 document.addEventListener("keydown",function(e){if(e.key==="Escape"){_nov.classList.remove("open");_hbg.classList.remove("open");closeLB();document.body.style.overflow="";}});
