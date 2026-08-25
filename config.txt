@@ -188,7 +188,6 @@ var CONFIG = {
     }
   ],
   "commHeroImage": "portrait1.png",
-  "commFormspree": "abcd1234",
   "commDeposit": "50",
   "commCurrency": "€",
   "testimonials": [
@@ -249,6 +248,9 @@ var CONFIG = {
   ],
   "contactEmail": "sharon@gmail.com",
   "contactFormspree": "abcd1234",
+  "formSubmitMode": "formspree_paid",
+  "formWorkerUrl": "",
+  "goatcounter": "",
   "contactAddress": "Nederland",
   "showTranslate": false,
   "policyShipping": "Alle portretten worden wereldwijd verzonden vanuit Nederland. Verzendkosten zijn inbegrepen in de prijs van elke opdracht.\n\nElk stuk is op maat gemaakt en wordt zorgvuldig verpakt. Ik accepteer geen retourzendingen. Als een stuk beschadigd aankomt tijdens het transport, neem dan binnen 48 uur contact met mij op met foto's en ik werk samen met u aan een oplossing.",
