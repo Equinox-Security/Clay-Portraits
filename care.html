@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" media="print" onload="this.media='all';"/>
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap"/></noscript>
 <link rel="stylesheet" href="style.css"/>
+</head>
 <body>
 <nav class="nav-overlay" id="navOverlay">
   <a href="#" class="nav-install-link" onclick="installApp();return false;">Add to Home Screen</a>
@@ -53,6 +54,60 @@
   <p style="font-family:'Jost',sans-serif;font-size:0.7rem;color:var(--muted);letter-spacing:0.08em;">&copy; 2026 Sharon's Clay Portraits&nbsp;&bull;&nbsp;All rights reserved</p>
 </footer>
 <script>
+async function handleWorkerFormSubmit(evt,formEl,endpoint,action){
+  evt.preventDefault();
+  var prefix=action.replace("submit_","");
+  var successEl=document.getElementById(prefix+"-form-success");var errorEl=document.getElementById(prefix+"-form-error");
+  if(successEl)successEl.style.display="none";if(errorEl)errorEl.style.display="none";
+  if(!endpoint){if(errorEl){errorEl.textContent="This form is not yet configured. Please contact us directly.";errorEl.style.display="block";}return false;}
+  var btn=formEl.querySelector('button[type="submit"]');var origText=btn?btn.textContent:"";
+  if(btn){btn.disabled=true;btn.textContent="Sending\u2026";}
+  try{
+    var fd=new FormData(formEl);
+    var photoFile=fd.get("photo");
+    var payload={action:action,fields:{}};
+    fd.forEach(function(value,key){if(key!=="photo"&&typeof value==="string")payload.fields[key]=value;});
+    if(photoFile&&photoFile.size>0){
+      var b64=await new Promise(function(res,rej){var r=new FileReader();r.onload=function(){res(r.result.split(",")[1]);};r.onerror=rej;r.readAsDataURL(photoFile);});
+      payload.photo=b64;payload.photoType=photoFile.type;
+    }
+    var res=await fetch(endpoint,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)});
+    if(res.ok){
+      formEl.reset();
+      if(successEl){successEl.style.display="block";successEl.scrollIntoView({behavior:"smooth",block:"center"});}
+    }else{
+      var msg=await res.text().catch(function(){return"Something went wrong. Please try again.";});
+      if(errorEl){errorEl.textContent=msg||"Something went wrong. Please try again.";errorEl.style.display="block";errorEl.scrollIntoView({behavior:"smooth",block:"center"});}
+    }
+  }catch(e){
+    if(errorEl){errorEl.textContent="Something went wrong. Please try again.";errorEl.style.display="block";}
+  }
+  if(btn){btn.disabled=false;btn.textContent=origText;}
+  return false;
+}
+async function handleFormspreeSubmit(evt,formEl,endpoint,successId,errorId){
+  evt.preventDefault();
+  var successEl=document.getElementById(successId);var errorEl=document.getElementById(errorId);
+  if(successEl)successEl.style.display="none";if(errorEl)errorEl.style.display="none";
+  if(!endpoint||endpoint.slice(-3)==="/f/"){if(errorEl){errorEl.textContent="This form is not yet configured. Please contact us directly.";errorEl.style.display="block";}return false;}
+  var btn=formEl.querySelector('button[type="submit"]');var origText=btn?btn.textContent:"";
+  if(btn){btn.disabled=true;btn.textContent="Sending\u2026";}
+  try{
+    var res=await fetch(endpoint,{method:"POST",body:new FormData(formEl),headers:{"Accept":"application/json"}});
+    var data=await res.json().catch(function(){return{};});
+    if(res.ok){
+      formEl.reset();
+      if(successEl){successEl.style.display="block";successEl.scrollIntoView({behavior:"smooth",block:"center"});}
+    }else{
+      var msg=(data&&data.errors&&data.errors.length)?data.errors.map(function(e){return e.message;}).join(", "):"Something went wrong. Please try again.";
+      if(errorEl){errorEl.textContent=msg;errorEl.style.display="block";errorEl.scrollIntoView({behavior:"smooth",block:"center"});}
+    }
+  }catch(e){
+    if(errorEl){errorEl.textContent="Something went wrong. Please try again.";errorEl.style.display="block";}
+  }
+  if(btn){btn.disabled=false;btn.textContent=origText;}
+  return false;
+}
 var _hbg=document.getElementById("hamburger"),_nov=document.getElementById("navOverlay");
 var deferredInstallPrompt=null;
 window.addEventListener("beforeinstallprompt",function(e){e.preventDefault();deferredInstallPrompt=e;});
