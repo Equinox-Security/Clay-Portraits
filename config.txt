@@ -30,7 +30,7 @@ var CONFIG = {
   "heroCtaLink": "commissions.html",
   "slideshowImgs": [
     {
-      "url": "portrait1.png",
+      "url": "portrait1.jpg",
       "caption": "Aangepast kleien portret — besteld van uw foto"
     },
     {
