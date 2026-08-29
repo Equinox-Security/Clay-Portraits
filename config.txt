@@ -1,6 +1,6 @@
 var CONFIG = {
-  "bizName": "Equinox's Clay Portraits",
-  "bizShort": "Equinox Clay",
+  "bizName": "Sharon's Clay Portraits",
+  "bizShort": "Sharon Clay",
   "tagline": "Handgemaakt van uw foto — volledig met de hand",
   "location": "Nederland",
   "bizType": "commission-only",
@@ -53,7 +53,7 @@ var CONFIG = {
   "aboutTeaserLabel": "De kunstenaar",
   "aboutTeaserHeading": "Beeldhouwd\nmet intentie",
   "aboutTeaserBody": "Elk portret begint met uw foto en eindigt als iets dat u doorgeeft. Geen mallen. Geen snelkoppelingen. Alleen handen, klei en zorg.",
-  "aboutTeaserBtn": "Maak kennis met Equinox",
+  "aboutTeaserBtn": "Maak kennis met Sharon",
   "aboutTeaserLink": "about.html",
   "galleryPortraits": [
     {
@@ -221,7 +221,7 @@ var CONFIG = {
     {
       "name": "Sarah M.",
       "location": "Rotterdam, Nederland",
-      "quote": "Mijn oma fluisterde: 'Dat ben ik toch?' Geen ogen, geen mond — en toch wist ze het. Equinoxs werk is buitengewoon.",
+      "quote": "Mijn oma fluisterde: 'Dat ben ik toch?' Geen ogen, geen mond — en toch wist ze het. Sharons werk is buitengewoon.",
       "photoUrl": "portrait4.png",
       "videoUrl": "",
       "stars": 5,
@@ -238,15 +238,15 @@ var CONFIG = {
     }
   ],
   "showStars": false,
-  "aboutName": "Equinox",
-  "aboutBio": "Equinox is een zelfgeleerde polymeerklei kunstenaar uit Nederland, wiens werk zijn weg heeft gevonden naar huizen in heel Europa en daarbuiten.\n\nElk portret begint met een gesprek en een foto. Wat volgt is Equinoxs eigen werkwijze — uren van zorgvuldige observatie, boetseren en verfijning totdat het stuk er niet alleen uitziet als de persoon, maar als henzelf.\n\nIn 2024 ontdekte een bekendheid in Nederland haar werk en bestelde een portret. Het stuk bevestigde wat haar klanten al jaren wisten: dit is geen ambacht. Het is kunst.",
+  "aboutName": "Sharon",
+  "aboutBio": "Sharon is een zelfgeleerde polymeerklei kunstenaar uit Nederland, wiens werk zijn weg heeft gevonden naar huizen in heel Europa en daarbuiten.\n\nElk portret begint met een gesprek en een foto. Wat volgt is Sharons eigen werkwijze — uren van zorgvuldige observatie, boetseren en verfijning totdat het stuk er niet alleen uitziet als de persoon, maar als henzelf.\n\nIn 2024 ontdekte een bekendheid in Nederland haar werk en bestelde een portret. Het stuk bevestigde wat haar klanten al jaren wisten: dit is geen ambacht. Het is kunst.",
   "aboutPhotos": [
     {
       "url": "about1.png",
-      "alt": "Equinox aan het werk in haar atelier"
+      "alt": "Sharon aan het werk in haar atelier"
     }
   ],
-  "contactEmail": "Equinox@gmail.com",
+  "contactEmail": "Sharon@gmail.com",
   "contactFormspree": "abcd1234",
   "formSubmitMode": "formspree_paid",
   "formWorkerUrl": "",
